@@ -6,3 +6,6 @@ service:
   startCommand: python main.py
   ports:
     - port: 8080
+  scaling:
+    min: 1
+    max: 1
