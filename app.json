@@ -1,0 +1,45 @@
+{
+    "name": "Akira",
+    "description": "A modular and scalable Telegram bot using Pyrogram and MongoDB.",
+    "repository": "https://github.com/yourusername/akira-bot",
+    "logo": "https://telegram.org/img/t_logo.png",
+    "keywords": ["telegram", "bot", "pyrogram", "mongodb", "modular"],
+    "env": {
+      "API_ID": {
+        "description": "Your Telegram API ID from my.telegram.org",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "Your Telegram API Hash from my.telegram.org",
+        "required": true
+      },
+      "BOT_TOKEN": {
+        "description": "Your Telegram Bot Token from BotFather",
+        "required": true
+      },
+      "MONGO_URI": {
+        "description": "MongoDB connection string",
+        "required": true
+      },
+      "ADMINS": {
+        "description": "Comma-separated list of Telegram user IDs with admin privileges",
+        "required": true
+      }
+    },
+    "buildpacks": [
+      {
+        "url": "heroku/python"
+      }
+    ],
+    "formation": {
+      "worker": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
+    "addons": [],
+    "scripts": {
+      "postdeploy": "echo Deployment finished!"
+    }
+  }
+  

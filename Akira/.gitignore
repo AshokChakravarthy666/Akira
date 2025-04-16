@@ -1,0 +1,25 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment files
+.env
+venv/
+env/
+.venv/
+
+# Heroku-related files
+*.log
+*.sqlite3
+
+# IDE files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Other temporary files
+*.swp
