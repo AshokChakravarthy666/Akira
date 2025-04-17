@@ -1,1 +1,1 @@
-worker: python3 -m Akira
+web: python -m Akira
