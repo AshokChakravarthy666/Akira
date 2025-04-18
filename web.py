@@ -1,18 +1,13 @@
+import os
 from flask import Flask
-from threading import Thread
 
-# Initialize Flask app
+PORT = int(os.getenv("PORT", 8080))
+
 app = Flask(__name__)
 
-# Sample route to check if the web server is working
-@app.route('/')
-def home():
-    return "Akira Bot Web Server is Running!"
+@app.route("/")
+def health():
+    return "✅ Pyrogram bot is healthy", 200
 
-def run_web():
-    app.run(debug=True, use_reloader=False)  # Avoid reloader when using threading
-
-# Optionally, you can use this to run it in a separate thread
-def run_web_threaded():
-    thread = Thread(target=run_web)
-    thread.start()
+def run_flask():
+    app.run(host="0.0.0.0", port=PORT)
