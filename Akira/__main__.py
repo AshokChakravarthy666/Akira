@@ -1,6 +1,6 @@
 from multiprocessing import Process
 from Akira.bot import start_bot
-from Akira.web import run_flask
+from web import run_flask
 
 if __name__ == "__main__":
     try:
