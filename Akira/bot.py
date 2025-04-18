@@ -19,6 +19,6 @@ for filename in os.listdir(commands_directory):
         importlib.import_module(module_name)  # Import the command dynamically
         logging.info(f"Loaded command handler: {module_name}")
 
-def main():
+def start_bot():
     logger.info("Bot is starting...")
     app.run()
